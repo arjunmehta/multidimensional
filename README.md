@@ -23,7 +23,7 @@ var MultiDimensional = require('multidimensional');
 ```
 
 ### Initialize a New Instance
-To create a new MultiDimensional, create a new instance and pass in the dimensional sizes as an array. All values will initialize as `null`:
+To create a new MultiDimensional, create a new instance and pass in the dimensional sizes as an array. By default all values will initialize as `null`:
 
 ```javascript
 // create a 3x3 matrix
@@ -33,7 +33,7 @@ var twodimensional = new MultiDimensional([3, 3]);
 var threedimensional = new MultiDimensional([3, 3, 4]);
 
 // create a 4x3x4x2 matrix
-var twodimensional = new MultiDimensional([4, 3, 4, 2]);
+var fourdimensional = new MultiDimensional([4, 3, 4, 2]);
 
 // etc...
 ```
