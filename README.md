@@ -56,8 +56,8 @@ function Cell(position, overallDimensions) {
     this.overallDimensions = overallDimensions
 }
 
-// create a 3x3x4 matrix with all positions set to 0
-var threedimensional = new MultiDimensional([3, 3], function(position, multidimensional) {
+// create a 3x3x4 matrix with all positions set to a unique Cell object.
+var threedimensional = new MultiDimensional([3, 3, 4], function(position, multidimensional) {
     return new Cell(position, multidimensional.dimensions)
 })
 ```
