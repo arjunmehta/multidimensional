@@ -23,6 +23,7 @@ MultiDimensional.prototype.position = function(position, value) {
 
 
 // MultiDimensional Array Algorithms
+// from: http://stackoverflow.com/questions/12588618/javascript-n-dimensional-array-creation/12588826#12588826
 
 function createNDimensionArray(multidimensional, dimensions, position, cb) {
 
