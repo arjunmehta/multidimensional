@@ -51,7 +51,7 @@ function createNDimensionArray(multidimensional, dimensions, position, cb) {
     } else {
 
         if (typeof cb === 'function') {
-            returnValue = cb(position, multidimensional);
+            returnValue = cb(position.slice(), multidimensional);
         } else if (cb !== undefined) {
             returnValue = cb;
         } else {
