@@ -62,9 +62,11 @@ var threedimensional = new MultiDimensional([3, 3, 4], function(position, multid
 })
 ```
 
+
 ### Get Position Values
 
-**Important**: Indexes start at `[0, 0, 0]`. So if you created an array of size 3x3x3 (`[3, 3, 3]`), the highest index will be `[2, 2, 2]`.
+**IMPORTANT**: Position indexes start at `[0, 0, 0]`. So if you created an array of size 3x4x5 (`[3, 4, 5]`), the highest index will be `[2, 3, 4]`.
+
 
 ```javascript
 threedimensional.position([2, 2, 2])
