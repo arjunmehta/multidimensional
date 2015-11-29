@@ -26,13 +26,13 @@ var MultiDimensional = require('multidimensional')
 To create a new MultiDimensional, create a new instance and pass in the dimensional sizes as an array. By default all values will initialize as `null`:
 
 ```javascript
-// create a 3x3 matrix
+// create a 3x3 array
 var twodimensional = new MultiDimensional([3, 3])
 
-// create a 3x3x4 matrix
+// create a 3x3x4 array
 var threedimensional = new MultiDimensional([3, 3, 4])
 
-// create a 4x3x4x2 matrix
+// create a 4x3x4x2 array
 var fourdimensional = new MultiDimensional([4, 3, 4, 2])
 
 // etc...
@@ -42,10 +42,10 @@ var fourdimensional = new MultiDimensional([4, 3, 4, 2])
 
 If you want to create a new instance with initial values, you can pass in an initial value for all positions:
 ```javascript
-// create a 3x3 matrix with all positions set to 0
+// create a 3x3 array with all positions set to 0
 var threedimensional = new MultiDimensional([3, 3], 0)
 
-// create a 3x3x4 matrix with all positions set to 'Default String'
+// create a 3x3x4 array with all positions set to 'Default String'
 var threedimensionalAsStrings = new MultiDimensional([3, 3, 4], 'Default String')
 ```
 
@@ -56,7 +56,7 @@ function Cell(position, overallDimensions) {
     this.overallDimensions = overallDimensions
 }
 
-// create a 3x3x4 matrix with all positions set to a unique Cell object.
+// create a 3x3x4 array with all positions set to a unique Cell object.
 var threedimensional = new MultiDimensional([3, 3, 4], function(position, multidimensional) {
     return new Cell(position, multidimensional.dimensions)
 })
