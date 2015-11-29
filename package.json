@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/arjunmehta/multidimensional#readme",
   "devDependencies": {
-    "eslint": "^1.10.2",
-    "tape": "^4.2.2"
+    "eslint": "1.10.2",
+    "tape": "4.2.2"
   }
 }
