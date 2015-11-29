@@ -42,8 +42,8 @@ var fourdimensional = new MultiDimensional([4, 3, 4, 2])
 
 If you want to create a new instance with initial values, you can pass in an initial value for all positions:
 ```javascript
-// create a 3x3 array with all positions set to 0
-var threedimensional = new MultiDimensional([3, 3], 0)
+// create a 3x4 array with all positions set to 0
+var twodimensional = new MultiDimensional([3, 4], 0)
 
 // create a 3x3x4 array with all positions set to 'Default String'
 var threedimensionalAsStrings = new MultiDimensional([3, 3, 4], 'Default String')
