@@ -1,5 +1,7 @@
 # node-multidimensional
 
+[![Build Status](https://travis-ci.org/arjunmehta/node-multidimensional.svg)](https://travis-ci.org/arjunmehta/node-multidimensional)
+
 Create and manage self aware multidimensional arrays of anything. Use this module to:
 
 - **Make multidimensional array instances with as many dimensions as you can keep track of.**
