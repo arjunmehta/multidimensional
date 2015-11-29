@@ -27,7 +27,7 @@ test('Set a Value to a String', function(t) {
     var multidimensional = new MultiDimensional([5, 4, 3]);
 
     t.equal(multidimensional.position([3, 2, 1]), null);
-    multidimensional.set([3, 2, 1], 'Jambalaya');
+    multidimensional.position([3, 2, 1], 'Jambalaya');
     t.equal(multidimensional.position([3, 2, 1]), 'Jambalaya');
 
     console.log(multidimensional.matrix);
