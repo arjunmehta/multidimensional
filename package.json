@@ -1,0 +1,34 @@
+{
+  "name": "multidimensional",
+  "version": "1.0.0",
+  "description": "Generate self aware multidimensional arrays of anything.",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "tape ./tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjunmehta/node-multidimensional.git"
+  },
+  "keywords": [
+    "multidimensional",
+    "n-dimension",
+    "2d",
+    "array",
+    "3d",
+    "array"
+  ],
+  "author": "Arjun Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arjunmehta/node-multidimensional/issues"
+  },
+  "homepage": "https://github.com/arjunmehta/node-multidimensional#readme",
+  "devDependencies": {
+    "eslint": "^1.10.2",
+    "tape": "^4.2.2"
+  }
+}
