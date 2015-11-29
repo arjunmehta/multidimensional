@@ -29,6 +29,29 @@ test('Set a Value to a String', function(t) {
     t.equal(multidimensional.position([3, 2, 1]), null);
     multidimensional.position([3, 2, 1], 'Jambalaya');
     t.equal(multidimensional.position([3, 2, 1]), 'Jambalaya');
-    
+
     t.end();
 });
+
+
+test('Set a Values to an instance of an Object', function(t) {
+
+    var threedimensional = new MultiDimensional([3, 3, 4], function(position, multidimensional) {
+        return new Cell(position, multidimensional.dimensions);
+    });
+
+    // console.log(JSON.stringify(threedimensional));
+
+    t.equal(threedimensional.position([2, 2, 1]).position[0], 2);
+    t.equal(threedimensional.position([2, 2, 1]).position[1], 2);
+    t.equal(threedimensional.position([2, 2, 1]).position[2], 1);
+
+    t.end();
+
+});
+
+
+function Cell(position, overallDimensions) {
+    this.position = position;
+    this.overallDimensions = overallDimensions;
+}
