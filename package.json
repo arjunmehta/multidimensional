@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arjunmehta/node-multidimensional.git"
+    "url": "git+https://github.com/arjunmehta/multidimensional.git"
   },
   "keywords": [
     "multidimensional",
@@ -24,9 +24,9 @@
   "author": "Arjun Mehta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arjunmehta/node-multidimensional/issues"
+    "url": "https://github.com/arjunmehta/multidimensional/issues"
   },
-  "homepage": "https://github.com/arjunmehta/node-multidimensional#readme",
+  "homepage": "https://github.com/arjunmehta/multidimensional#readme",
   "devDependencies": {
     "eslint": "^1.10.2",
     "tape": "^4.2.2"
