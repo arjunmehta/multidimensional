@@ -1,16 +1,24 @@
 function MultiDimensional(dimensions, cb) {
+
     var initialPosition = createInitialArray([], dimensions.length);
+
+    this.dimensions = dimensions;
     this.matrix = createNDimensionArray(this, dimensions, initialPosition, cb);
 
     return this;
 }
 
-MultiDimensional.prototype.position = function(position) {
-    return getElement(this.matrix, position);
-};
+MultiDimensional.prototype.position = function(position, value) {
 
-MultiDimensional.prototype.set = function(position, value) {
-    return setElement(this.matrix, position, value);
+    var returnValue;
+
+    if (value === undefined) {
+        returnValue = getElement(this.matrix, position);
+    } else {
+        returnValue = setElement(this.matrix, position, value);
+    }
+
+    return returnValue;
 };
 
 
@@ -42,10 +50,8 @@ function createNDimensionArray(multidimensional, dimensions, position, cb) {
 
     } else {
 
-        // console.log('Setting position', position, 'to', cb);
-
         if (typeof cb === 'function') {
-            returnValue = cb(multidimensional, position, dimensions);
+            returnValue = cb(position, multidimensional);
         } else if (cb !== undefined) {
             returnValue = cb;
         } else {
@@ -71,11 +77,16 @@ function getElement(array, indices) {
 
 function setElement(array, indices, value) {
 
+    var returnValue;
+
     if (indices.length === 1) {
         array[indices[0]] = value;
+        returnValue = value;
     } else {
-        setElement(array[indices[0]], indices.slice(1), value);
+        returnValue = setElement(array[indices[0]], indices.slice(1), value);
     }
+
+    return returnValue;
 }
 
 function createInitialArray(arr, length) {
