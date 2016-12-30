@@ -53,13 +53,12 @@ Or pass in a callback to return a value or object to be put in `position`. The c
 ```javascript
 // create a 3x3x4 array with all positions set to a unique Cell object.
 var threedimensional = new MultiDimensional([3, 3, 4], function(position, multidimensional) {
-    return new Cell(position, multidimensional.dimensions)
+    return {
+        description: 'I am a cell at position ' + position.join(),
+        position: position,
+        globalSize: multidimensional.dimensions
+    }
 })
-
-function Cell(position, overallDimensions) {
-    this.position = position
-    this.overallDimensions = overallDimensions
-}
 ```
 
 
