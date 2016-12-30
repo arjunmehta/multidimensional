@@ -9,7 +9,7 @@ Create and manage self aware multi-dimensional arrays of anything. Use this modu
 - **Set and Get positions within the array to any value or object.**
 - **Do all this with a simple and scalable interface.**
 
-## Basic Usage
+**IMPORTANT**: Currently, multi-dimensional arrays are fixed in size. That means if you manipulate any of the dimensional arrays (eg. with `push`, `pop`, `slice` etc) you will get unexpected behaviours.
 
 ## Install
 ```bash
@@ -49,19 +49,6 @@ var twodimensional = new MultiDimensional([3, 4], 0)
 var threedimensionalAsStrings = new MultiDimensional([3, 3, 4], 'Default String')
 ```
 
-Or pass in a callback to return a value or object to be put in `position`. The callback takes the `position` and the `multidimensional` instance it will be added to.
-```javascript
-// create a 3x3x4 array with all positions set to a unique Cell object.
-var threedimensional = new MultiDimensional([3, 3, 4], function(position, multidimensional) {
-    return {
-        description: 'I am a cell at position ' + position.join(),
-        position: position,
-        globalSize: multidimensional.dimensions
-    }
-})
-```
-
-
 ### Get Position Values
 
 **IMPORTANT**: Position indexes start at `[0, 0, 0]`. So if you created an array of size 3x4x5 (`[3, 4, 5]`), the highest index will be `[2, 3, 4]`.
@@ -75,6 +62,26 @@ threedimensional.position([2, 2, 2])
 ```javascript
 threedimensional.position([2, 2, 2], 'New Value')
 ```
+
+
+## Advanced Usage
+
+### Self-Aware Values with Callback
+When constructing your multi-dimensional array, you can use a callback function to construct and return an item for each position.
+
+The callback is called with the `position` and the `multidimensional` instance it will be added to.
+
+```javascript
+// create a 3x3x4 array with all positions set to a unique Cell object.
+var threedimensional = new MultiDimensional([3, 3, 4], function(position, multidimensional) {
+    return {
+        mydescription: 'I am a cell at position ' + position.join(),
+        myposition: position,
+        myparent: multidimensional
+    }
+})
+```
+
 
 ## License
 The MIT License (MIT)<br/>
